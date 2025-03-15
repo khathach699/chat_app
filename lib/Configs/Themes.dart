@@ -35,5 +35,25 @@ var darktheme = ThemeData(
       fontFamily: "Poppins",
       fontWeight: FontWeight.w600,
     ),
+
+    labelLarge: TextStyle(
+      fontSize: 15,
+      color: dContainerColor,
+      fontFamily: "Poppins",
+      fontWeight: FontWeight.w400,
+    ),
+
+    labelMedium: TextStyle(
+      fontSize: 12,
+      color: dContainerColor,
+      fontFamily: "Poppins",
+      fontWeight: FontWeight.w400,
+    ),
+    labelSmall: TextStyle(
+      fontSize: 10,
+      color: dContainerColor,
+      fontFamily: "Poppins",
+      fontWeight: FontWeight.w300,
+    ),
   ),
 );
