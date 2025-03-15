@@ -3,6 +3,8 @@ import 'package:chat_app/Configs/Strings.dart';
 import 'package:chat_app/Pages/Welcome/Widgets/WelcomeBody.dart';
 import 'package:chat_app/Pages/Welcome/Widgets/WelcomeHeading.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/instance_manager.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -19,7 +21,13 @@ class WelcomePage extends StatelessWidget {
             children: [
               WelcomeHeading(),
               WelcomeBody(),
-              SlideAction(onSubmit: () {}, text: AppString.WelcomeSlideStart),
+              SlideAction(
+                onSubmit: () {
+                  Get.offAllNamed("/authPage");
+                },
+                outerColor: Colors.black,
+                text: AppString.WelcomeSlideStart,textStyle: Theme.of(context).textTheme.labelLarge,
+              ),
             ],
           ),
         ),

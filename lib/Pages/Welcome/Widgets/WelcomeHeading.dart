@@ -21,6 +21,7 @@ class WelcomeHeading extends StatelessWidget {
             ),
           ],
         ),
+        SizedBox(height: 20),
         Text(
           AppString.appName,
           style: Theme.of(context).textTheme.headlineLarge,
