@@ -14,28 +14,28 @@ var lightTheme = ThemeData(
   ),
 
   inputDecorationTheme: InputDecorationTheme(
-    fillColor: colorPrimary,
+    fillColor: dOnBackgroundColor,
     filled: true,
   ),
 
   textTheme: TextTheme(
     headlineLarge: TextStyle(
       fontSize: 32,
-      color: colorPrimary,
+      color: primaryColor,
       fontFamily: "Poppins",
       fontWeight: FontWeight.w800,
     ),
 
     headlineMedium: TextStyle(
       fontSize: 30,
-      color: colorPrimary,
+      color: primaryColor,
       fontFamily: "Poppins",
       fontWeight: FontWeight.w600,
     ),
 
     headlineSmall: TextStyle(
       fontSize: 20,
-      color: colorPrimary,
+      color: primaryColor,
       fontFamily: "Poppins",
       fontWeight: FontWeight.w600,
     ),
@@ -61,14 +61,14 @@ var lightTheme = ThemeData(
     ),
     bodyLarge: TextStyle(
       fontSize: 18,
-      color: colorPrimary,
+      color: primaryColor,
       fontFamily: "Poppins",
       fontWeight: FontWeight.w500,
     ),
 
     bodyMedium: TextStyle(
       fontSize: 15,
-      color: colorPrimary,
+      color: primaryColor,
       fontFamily: "Poppins",
       fontWeight: FontWeight.w500,
     ),

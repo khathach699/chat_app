@@ -1,3 +1,4 @@
+import 'package:chat_app/Configs/Colors.dart';
 import 'package:chat_app/Configs/Image.dart';
 import 'package:chat_app/Configs/Strings.dart';
 import 'package:chat_app/Pages/Welcome/Widgets/WelcomeBody.dart';
@@ -26,7 +27,9 @@ class WelcomePage extends StatelessWidget {
                   Get.offAllNamed("/authPage");
                 },
                 outerColor: Colors.black,
-                text: AppString.WelcomeSlideStart,textStyle: Theme.of(context).textTheme.labelLarge,
+                text: AppString.WelcomeSlideStart,textStyle: TextStyle(
+                color: dOnBackgroundColor
+              ),
               ),
             ],
           ),

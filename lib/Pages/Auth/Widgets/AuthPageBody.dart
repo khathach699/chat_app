@@ -3,6 +3,8 @@ import 'package:chat_app/Pages/Auth/Widgets/SignupForm.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../Configs/Colors.dart';
+
 class AuthPageBody extends StatefulWidget {
   const AuthPageBody({super.key});
 
@@ -18,7 +20,7 @@ class _AuthPageBodyState extends State<AuthPageBody> {
       // height: 400,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: Theme.of(context).colorScheme.primaryContainer,
+        color: dOnBackgroundColor,
       ),
 
       child: Padding(
@@ -59,7 +61,7 @@ class _AuthPageBodyState extends State<AuthPageBody> {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(100),
                                     color:
-                                        Theme.of(context).colorScheme.primary,
+                                        primaryColor,
                                   ),
                                 ),
                               ],
@@ -93,7 +95,7 @@ class _AuthPageBodyState extends State<AuthPageBody> {
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(100),
                                     color:
-                                        Theme.of(context).colorScheme.primary,
+                                    primaryColor
                                   ),
                                 ),
                               ],

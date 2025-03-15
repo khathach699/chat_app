@@ -6,7 +6,7 @@ class SignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       children: [
         Column(
           children: [
@@ -32,7 +32,7 @@ class SignupForm extends StatelessWidget {
             ),
             SizedBox(height: 20),
             SizedBox(height: 30),
-            PrimaryButton(btnName: "Sign In", icon: Icons.lock_open_outlined),
+            PrimaryButton(  onTap: (){}, btnName: "Sign In", icon: Icons.lock_open_outlined),
           ],
         ),
       ],

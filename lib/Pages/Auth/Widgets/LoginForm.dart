@@ -1,12 +1,14 @@
 import 'package:chat_app/Widgets/PrimaryButton.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       children: [
         Column(
           children: [
@@ -24,7 +26,11 @@ class LoginForm extends StatelessWidget {
               ),
             ),
             SizedBox(height: 30),
-            PrimaryButton(btnName: "Login", icon: Icons.lock_open_outlined),
+            PrimaryButton(
+              onTap: (){
+                Get.offAllNamed("/homePage");
+              }
+            ,btnName: "Login", icon: Icons.lock_open_outlined),
           ],
         ),
       ],
