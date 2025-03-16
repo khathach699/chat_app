@@ -2,6 +2,8 @@ import 'package:chat_app/Configs/Strings.dart';
 import 'package:chat_app/Pages/Home/Widgets/TabBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/instance_manager.dart';
 
 import '../../Configs/Image.dart';
 import 'Widgets/ChatList.dart';
@@ -23,7 +25,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         leading: Image.asset(AssetImages.logoStone, width: 50, height: 50),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+          IconButton(
+            onPressed: () {
+              Get.toNamed("/profilePage");
+            },
+            icon: Icon(Icons.more_vert),
+          ),
         ],
         bottom: MyTabBar(tabController, context),
       ),
@@ -37,14 +44,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           controller: tabController,
           children: [
             ChatList(),
-            ListView(children: [ListTile(title: Text("data5")),
-              ListTile(title: Text("data1")),
-              ListTile(title: Text("data2"))
-            ]),
-            ListView(children: [ListTile(title: Text("data6")),
-              ListTile(title: Text("data1")),
-              ListTile(title: Text("data2"))
-            ]),
+            ListView(
+              children: [
+                ListTile(title: Text("data5")),
+                ListTile(title: Text("data1")),
+                ListTile(title: Text("data2")),
+              ],
+            ),
+            ListView(
+              children: [
+                ListTile(title: Text("data6")),
+                ListTile(title: Text("data1")),
+                ListTile(title: Text("data2")),
+              ],
+            ),
           ],
         ),
       ),

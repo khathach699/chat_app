@@ -1,6 +1,7 @@
 import 'package:chat_app/Pages/Auth/AuthPage.dart';
 import 'package:chat_app/Pages/Chat/ChatPage.dart';
 import 'package:chat_app/Pages/Home/HomePage.dart';
+import 'package:chat_app/Profiles/ProfilePage.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 
 var pagePath = [
@@ -25,6 +26,12 @@ var pagePath = [
   GetPage(
     name: "/login",
     page: () => const AuthPage(),
+    transition: Transition.rightToLeft,
+  ),
+
+  GetPage(
+    name: "/profilePage",
+    page: () => const ProfilePage(),
     transition: Transition.rightToLeft,
   ),
 ];
