@@ -1,3 +1,4 @@
+import 'package:chat_app/Controllers/AuthController.dart';
 import 'package:chat_app/Widgets/PrimaryButton.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,29 +9,38 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    TextEditingController email = TextEditingController();
+    TextEditingController password = TextEditingController();
+    AuthController authController = Get.put(AuthController());
+    return Column(
       children: [
         Column(
           children: [
             TextField(
-              decoration: InputDecoration(
+              controller: email,
+              decoration: const InputDecoration(
                 hintText: "Email",
                 prefixIcon: Icon(Icons.alternate_email_rounded),
               ),
             ),
             SizedBox(height: 20),
             TextField(
-              decoration: InputDecoration(
+              controller: password,
+              decoration: const InputDecoration(
                 hintText: "Password",
                 prefixIcon: Icon(Icons.password_outlined),
               ),
             ),
             SizedBox(height: 30),
-            PrimaryButton(
-              onTap: (){
-                Get.offAllNamed("/homePage");
-              }
-            ,btnName: "Login", icon: Icons.lock_open_outlined),
+            authController.isLoading.value
+                ? CircularProgressIndicator()
+                : PrimaryButton(
+                  onTap: () {
+                    authController.login(email.text, password.text);
+                  },
+                  btnName: "Login",
+                  icon: Icons.lock_open_outlined,
+                ),
           ],
         ),
       ],

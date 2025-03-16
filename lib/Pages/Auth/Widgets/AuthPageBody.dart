@@ -15,7 +15,7 @@ class AuthPageBody extends StatefulWidget {
 class _AuthPageBodyState extends State<AuthPageBody> {
   @override
   Widget build(BuildContext context) {
-    RxBool isLogin = false.obs;
+    RxBool isLogin = true.obs;
     return Container(
       // height: 400,
       decoration: BoxDecoration(
@@ -60,8 +60,7 @@ class _AuthPageBodyState extends State<AuthPageBody> {
                                   height: 5,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(100),
-                                    color:
-                                        primaryColor,
+                                    color: primaryColor,
                                   ),
                                 ),
                               ],
@@ -94,8 +93,7 @@ class _AuthPageBodyState extends State<AuthPageBody> {
                                   height: 5,
                                   decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(100),
-                                    color:
-                                    primaryColor
+                                    color: primaryColor,
                                   ),
                                 ),
                               ],
@@ -105,7 +103,7 @@ class _AuthPageBodyState extends State<AuthPageBody> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 30,),
+                  SizedBox(height: 30),
                   Obx(
                     () =>
                         isLogin.value ? const LoginForm() : const SignupForm(),

@@ -21,4 +21,10 @@ var pagePath = [
     page: () => const ChatPage(),
     transition: Transition.rightToLeft,
   ),
+
+  GetPage(
+    name: "/login",
+    page: () => const AuthPage(),
+    transition: Transition.rightToLeft,
+  ),
 ];
