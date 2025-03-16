@@ -10,4 +10,8 @@ class AssetImages {
   static const person1 = "$iconPath/person1.png";
   static const person2 = "$iconPath/person2.png";
   static const connect = "$iconPath/connect.png";
+  static const vector = "$iconPath/Vector.png";
+  static const mirco = "$iconPath/mirco.png";
+  static const send = "$iconPath/send.png";
+  static const image = "$iconPath/image.png";
 }

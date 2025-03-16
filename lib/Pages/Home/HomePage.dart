@@ -1,5 +1,5 @@
 import 'package:chat_app/Configs/Strings.dart';
-import 'package:chat_app/Pages/HomePage/Widgets/TabBar.dart';
+import 'package:chat_app/Pages/Home/Widgets/TabBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
