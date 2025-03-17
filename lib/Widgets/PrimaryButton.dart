@@ -2,7 +2,12 @@ import 'package:chat_app/Configs/Colors.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
-  const PrimaryButton({super.key, required this.btnName, required this.icon, required this.onTap});
+  const PrimaryButton({
+    super.key,
+    required this.btnName,
+    required this.icon,
+    required this.onTap,
+  });
   final String btnName;
   final IconData icon;
   final VoidCallback onTap;
@@ -12,20 +17,17 @@ class PrimaryButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-
         padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: primaryColor,
+          color: Colors.black54,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(icon, color: Colors.white,),
+            Icon(icon, color: Colors.white),
             SizedBox(width: 10),
-            Text(btnName, style: TextStyle(
-              color: dOnBackgroundColor
-            )),
+            Text(btnName, style: TextStyle(color: dOnBackgroundColor)),
           ],
         ),
       ),
